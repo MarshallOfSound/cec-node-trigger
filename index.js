@@ -7,7 +7,7 @@ const monitor = new HDMI.CecMonitor(
 monitor.start()
 
 console.info('Starting CEC');
-monitor.on('ready', () => {
+monitor.once('ready', () => {
   console.info('CEC Ready');
   monitor.on('op.CEC_VERSION', console.warn)
   console.info('Asking for CEC version');
