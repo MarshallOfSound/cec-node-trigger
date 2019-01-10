@@ -1,0 +1,11 @@
+{
+  "name": "cec-node-trigger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:MarshallOfSound/cec-node-trigger.git",
+  "author": "Samuel Attard <samuel.r.attard@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "hdmi-cec": "^0.2.8"
+  }
+}
