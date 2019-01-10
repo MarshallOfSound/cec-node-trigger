@@ -4,6 +4,9 @@ const monitor = new HDMI.CecMonitor(
   'cec-node-trigger'
 )
 
-monitor.emit = (...args) => console.warn('CEC Event:', ...args);
-
 monitor.start()
+
+monitor.on('op.CEC_VERSION', console.warn)
+monitor.executeOperation(HDMI.LogicalAddress.TV, HDMI.OperationCode.GET_CEC_VERSION);
+
+// const commander = new HDMI.Commander
